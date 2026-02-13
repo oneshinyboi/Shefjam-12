@@ -30,7 +30,8 @@ namespace DefaultNamespace
             var moveValue = _move.ReadValue<Vector2>();
             var horizontalMovement = moveValue * (speed * Time.fixedDeltaTime);
             var newPosition = _rb.position + new Vector3(horizontalMovement.x, 0, horizontalMovement.y);
-            _rb.MovePosition(newPosition);
+            _rb.MovePosition(transform.TransformDirection(newPosition));
+
 
             var lookValue = _look.ReadValue<Vector2>() * -1;
             var newRotation =
