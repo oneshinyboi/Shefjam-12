@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4f1e2d5a-4067-5ab3-ec6a-e0faec2e7cd0}</ProjectGuid>
+    <ProjectGuid>{b23b1a8e-647c-1fc1-e845-11ca8cc2cd80}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -48,6 +48,99 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm-help.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/images.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/i3.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/guihelp.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/workspaceserver.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/commontypes.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/semantic.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/plastic-gui.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/differences.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/semantic.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/semantic.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/clientcommon.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/configurehelper.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/xdiff.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/workspaceserver.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/commontypes.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/semantic.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/xdiff.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/basecommands.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/workspaceserver.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/xdiff.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/clientcommon.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm-help.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/guihelp.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/configurehelper.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/clientcommon.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/plastic-gui.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/commontypes.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/differences.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm-help.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/commontypes.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/images.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/mergetool.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/mergetool.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/commontypes.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/plastic-gui.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/basecommands.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/images.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/images.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/differences.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/differences.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/plastic-gui.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/guihelp.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/clientcommon.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/plastic-gui.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/configurehelper.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/plastic-gui.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/xdiff.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm-help.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/workspaceserver.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/semantic.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/i3.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/images.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/guihelp.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/mergetool.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/configurehelper.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/common.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/clientcommon.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/mergetool.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/FileSystemWatcherLicense.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/images.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/mergetool.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/basecommands.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/guihelp.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/guihelp.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/workspaceserver.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/workspaceserver.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/basecommands.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/i3.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/i3.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/mergetool.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/basecommands.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/configurehelper.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/xdiff.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/i3.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/clientcommon.zh-Hans.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/configurehelper.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/xdiff.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/common.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/i3.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/semantic.en.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm-help.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/differences.zh-Hant.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/commontypes.ko.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/basecommands.ja.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/cm-help.es.txt" />
+    <None Include="Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Localization/differences.ja.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/home/diamond/Unity/Hub/Editor/6000.3.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -466,43 +559,43 @@
       <HintPath>/home/diamond/Unity/Hub/Editor/6000.3.8f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.ext.nunit@ec2d0043d6fc/net40/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.ext.nunit@ec2d0043d6fc/net40/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/log4netPlastic.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Hashing">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.Tests/System.IO.Hashing/System.IO.Hashing.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.Tests/System.IO.Hashing/System.IO.Hashing.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/unityplastic.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.collab-proxy@e566cd3e7623/Lib/Editor/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff/Mono.Cecil.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff/Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>/home/diamond/Projects/Games/Shefjam-12/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/home/diamond/Unity/Hub/Editor/6000.3.8f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/mscorlib.dll</HintPath>
@@ -879,182 +972,239 @@
     <Reference Include="netstandard">
       <HintPath>/home/diamond/Unity/Hub/Editor/6000.3.8f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.TestRunner">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI.Analytics">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/UnityEditor.UI.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rendering.LightTransport.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Rendering.LightTransport.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.2D.Editor.Overrides">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.2D.Editor.Overrides.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="PPv2URPConverters">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime.Shared">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.2D.Runtime">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.2D.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.UnifiedRayTracing.Runtime">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.UnifiedRayTracing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Sysroot.Linux_x86_64">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Toolchain.Linux-x86_64-Linux">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64-Linux.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem.ForUI">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.InputSystem.ForUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.GPUDriven.Runtime">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.GPUDriven.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Multiplayer.Center.Common">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Multiplayer.Center.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEngineBridge.004">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.004.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Multiplayer.Center.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.SysrootPackage.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.Collections.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor.Shared">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Shared.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>/home/diamond/Projects/games/ShefJam-12/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{07f7d795-f5b7-f1ac-fc77-28bd9315ffcd}</Project>
+      <Project>{ece7afe8-8542-b08e-b831-fae19f30b1d7}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{ada0047b-71af-c95a-6cb6-0bdb2f350fcd}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{3007fa41-68d1-9d36-6975-4115e27661c9}</Project>
+      <Name>UnityEngine.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{f5e6df5c-e830-4071-3365-75e4b9f5246d}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.Analytics.csproj">
+      <Project>{6594f70a-e6f9-1316-4c9f-e7ce4c891032}</Project>
+      <Name>UnityEditor.UI.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{00ad19c6-f8a1-0e80-9602-b2e52b0f94b1}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rendering.LightTransport.Editor.csproj">
+      <Project>{c092f6e9-f7b0-b178-ae9f-1f4bfa336739}</Project>
+      <Name>Unity.Rendering.LightTransport.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AI.Navigation.csproj">
+      <Project>{655ea08a-e325-6f1a-b5b7-36822cb24a27}</Project>
+      <Name>Unity.AI.Navigation</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{891c9347-44c4-045a-0a7a-924d78572efc}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
+      <Project>{13494881-e87d-460c-f974-4c47eb8b3b93}</Project>
+      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Editor.Overrides.csproj">
+      <Project>{55f31a8e-ad8b-b13d-0756-2cf061607242}</Project>
+      <Name>Unity.RenderPipelines.Universal.2D.Editor.Overrides</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{152c1fbe-8f90-f3b8-6036-96d5ef640377}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
+      <Project>{825efc85-2195-a89a-72d6-ff3ab15520d4}</Project>
+      <Name>Unity.AI.Navigation.Updater</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{a84f3629-90ab-f75b-29e4-38e89272f6ec}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AI.Navigation.Editor.csproj">
+      <Project>{bdcc9603-f0f2-27d6-36dc-7ba6dad375d4}</Project>
+      <Name>Unity.AI.Navigation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PPv2URPConverters.csproj">
+      <Project>{bc602e35-c5d6-3888-817e-5e09ebd4ea79}</Project>
+      <Name>PPv2URPConverters</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Shared.csproj">
+      <Project>{bc444612-7f65-a5f2-fe57-4f54fb769e9d}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.csproj">
+      <Project>{50f16ea9-9c50-f701-cadd-5a06db0140fd}</Project>
+      <Name>Unity.RenderPipelines.Universal.2D.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
+      <Project>{8967ce18-82e6-ed13-a93c-657b0e0baf47}</Project>
+      <Name>Unity.VisualScripting.Shared.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{ccada071-89ad-79a1-37ab-dfc9bd880f81}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
+      <Project>{5cd9e5eb-9b2f-68db-1bf8-7d140a1e2a87}</Project>
+      <Name>Unity.PlasticSCM.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{d0ee750b-a8f4-05bc-3df8-75d14722c95c}</Project>
+      <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
+      <Project>{5b3caf2f-87c4-8e13-3476-7e10095c4010}</Project>
+      <Name>Unity.VisualScripting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{c514e070-0d43-92ad-b229-90dc0a8dd8ce}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.UnifiedRayTracing.Runtime.csproj">
+      <Project>{a1a18b56-6eeb-9d5d-9ff5-5f47d8759ed7}</Project>
+      <Name>Unity.UnifiedRayTracing.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Sysroot.Linux_x86_64.csproj">
+      <Project>{53b3c40c-145f-1cd5-2017-bb156166a98b}</Project>
+      <Name>Unity.Sysroot.Linux_x86_64</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{28f0178b-790a-e974-e456-559c661eaaaa}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Toolchain.Linux-x86_64-Linux.csproj">
+      <Project>{f9174cbe-c69a-34c6-81f2-7742c1f1c11c}</Project>
+      <Name>Unity.Toolchain.Linux-x86_64-Linux</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
+      <Project>{8153de86-88b7-d178-fec9-562f9d9b4194}</Project>
+      <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{5a623ed5-49ba-45a2-f5a6-1051efad617d}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{131bec67-91a5-d7f0-a139-5bebb536b07d}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
+      <Project>{8cdf9f76-2fda-44f7-f4c7-1e8250ad278e}</Project>
+      <Name>Unity.VisualScripting.Flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{8f4580b7-0701-e477-8c5a-6aa37b7cbf4f}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
+      <Project>{43700e90-0486-9e77-0429-859ba73fdf7e}</Project>
+      <Name>Unity.VisualScripting.Flow.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{06a00713-0409-fe06-985f-f95df5b91b2e}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.csproj">
+      <Project>{7cdf92c8-22a0-1e6b-107c-d6c7ace97b93}</Project>
+      <Name>Unity.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
+      <Project>{cf438bee-bb87-2bc4-0dd8-2c38dd820de1}</Project>
+      <Name>Unity.InputSystem.ForUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj">
+      <Project>{4b5b58df-9a04-2844-4f36-c844605cc129}</Project>
+      <Name>Unity.RenderPipelines.GPUDriven.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{f9202bbe-ab35-b883-f7f3-4aa3bf0fa9b4}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
+      <Project>{f61d6c71-ed10-5cb5-ec00-8c74a3f9aa92}</Project>
+      <Name>Unity.VisualScripting.State.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{490f4077-ebc1-3dee-417e-3b5c07da3c55}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{22837b77-2f5e-7402-4da1-04ad1ce0d4cf}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{87b8d022-9e93-6a2f-cc06-a90789610392}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Center.Common.csproj">
+      <Project>{3cf529b6-b09d-4c83-69b5-ac0161e7d0ee}</Project>
+      <Name>Unity.Multiplayer.Center.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{046f720f-3e79-34f7-4a26-b0c5fce503f9}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
+      <Project>{37ab6acc-26ee-3a8b-27a9-2fb0845c4e2e}</Project>
+      <Name>Unity.VisualScripting.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.004.csproj">
+      <Project>{3e2209a1-1fd4-dd24-298d-c927f3dacb86}</Project>
+      <Name>Unity.InternalAPIEngineBridge.004</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Center.Editor.csproj">
+      <Project>{0f757725-c23b-55d8-ce0a-a0f45cf94ac6}</Project>
+      <Name>Unity.Multiplayer.Center.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.SysrootPackage.Editor.csproj">
+      <Project>{3b71e085-0d46-7b48-77cd-17d8a9707fce}</Project>
+      <Name>Unity.SysrootPackage.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{f8fad069-620f-a25e-f87e-e3564522a14d}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.csproj">
+      <Project>{e20970c5-7ecc-15f7-ec32-defb3e7ea560}</Project>
+      <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.csproj">
+      <Project>{7e5b58b2-2a2b-df80-e5b0-f9f00300fa27}</Project>
+      <Name>Unity.RenderPipelines.Universal.Config.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{8cc1cab4-d75c-5677-b926-402f42537ede}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.Editor.csproj">
+      <Project>{57ae42fb-5ac4-5f79-f66b-789738291c76}</Project>
+      <Name>Unity.Collections.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{5c6d8cd5-b44a-491f-e7e4-0643c35dd02e}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.Shared.csproj">
+      <Project>{ee9ea666-4aca-cf14-4a97-3c9e42007a48}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.csproj">
+      <Project>{ce5f7576-5add-de7e-d8f2-29af13ab1a68}</Project>
+      <Name>Unity.InputSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{74820869-ea45-4556-58bd-e87ba306daa6}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

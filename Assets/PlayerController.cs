@@ -19,6 +19,7 @@ namespace DefaultNamespace
 
         public void Awake()
         {
+            Cursor.lockState = CursorLockMode.Locked;
             _move = InputSystem.actions.FindAction("Move");
             _jump = InputSystem.actions.FindAction("Jump");
             _look = InputSystem.actions.FindAction("Look");
@@ -29,8 +30,8 @@ namespace DefaultNamespace
         {
             var moveValue = _move.ReadValue<Vector2>();
             var horizontalMovement = moveValue * (speed * Time.fixedDeltaTime);
-            var newPosition = _rb.position + new Vector3(horizontalMovement.x, 0, horizontalMovement.y);
-            _rb.MovePosition(transform.TransformDirection(newPosition));
+            var newPosition = _rb.position + horizontalMovement.y * transform.forward + horizontalMovement.x * transform.right;
+            _rb.MovePosition(newPosition);
 
 
             var lookValue = _look.ReadValue<Vector2>() * -1;
