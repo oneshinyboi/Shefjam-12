@@ -27,7 +27,7 @@ namespace DefaultNamespace
 
         public void FixedUpdate()
         {
-            var moveValue = _move.ReadValue<Vector2>() * -1;
+            var moveValue = _move.ReadValue<Vector2>();
             var horizontalMovement = moveValue * (speed * Time.fixedDeltaTime);
             var newPosition = _rb.position + new Vector3(horizontalMovement.x, 0, horizontalMovement.y);
             _rb.MovePosition(newPosition);
@@ -41,13 +41,16 @@ namespace DefaultNamespace
                                     Quaternion.Euler(lookValue.y * lookSensitivity * Time.fixedDeltaTime, 0, 0);
             playerCamera.transform.rotation = newCameraRotation;
 
-            if (lookValue != Vector2.zero)
-                Debug.Log(lookValue);
 
             if (_jump.triggered)
             {
                 _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             }
+        }
+
+        public void Die()
+        {
+            _rb.Move(new Vector3(0, 0, 0), Quaternion.identity);
         }
     }
 }
