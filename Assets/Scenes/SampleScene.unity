@@ -254,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.PlayerController
   speed: 10
   jumpForce: 5
+  lookSensitivity: 10
 --- !u!65 &244245307
 BoxCollider:
   m_ObjectHideFlags: 0
