@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 244245307}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -255,6 +255,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 5
   lookSensitivity: 10
+  playerCamera: {fileID: 0}
 --- !u!65 &244245307
 BoxCollider:
   m_ObjectHideFlags: 0
