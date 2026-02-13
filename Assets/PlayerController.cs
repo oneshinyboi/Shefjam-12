@@ -7,15 +7,19 @@ namespace DefaultNamespace
     public class PlayerController : MonoBehaviour
     {
         public float speed;
+        public float airborneControlReductionFactor;
         public float jumpForce;
         public float lookSensitivity;
 
         public GameObject playerCamera;
 
+
         private InputAction _move;
         private InputAction _jump;
         private InputAction _look;
         private Rigidbody _rb;
+        private bool _jumpTriggered;
+        private bool _grounded;
 
         public void Awake()
         {
@@ -26,10 +30,18 @@ namespace DefaultNamespace
             _rb = GetComponent<Rigidbody>();
         }
 
+        public void Update()
+        {
+            if (_jump.triggered)
+                _jumpTriggered = true;
+        }
+
         public void FixedUpdate()
         {
             var moveValue = _move.ReadValue<Vector2>();
             var horizontalMovement = moveValue * (speed * Time.fixedDeltaTime);
+            if (!_grounded)
+                horizontalMovement *= airborneControlReductionFactor;
             var newPosition = _rb.position + horizontalMovement.y * transform.forward + horizontalMovement.x * transform.right;
             _rb.MovePosition(newPosition);
 
@@ -44,9 +56,20 @@ namespace DefaultNamespace
             playerCamera.transform.rotation = newCameraRotation;
 
 
-            if (_jump.triggered)
+            if (_jumpTriggered && _grounded)
             {
                 _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                _grounded = false;
+            }
+
+            _jumpTriggered = false;
+        }
+
+        public void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Floor"))
+            {
+                _grounded = true;
             }
         }
 

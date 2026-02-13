@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 244605749}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -515,18 +515,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3945910289251341822, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3945910289251341822, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3945910289251341822, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3945910289251341822, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.62
       objectReference: {fileID: 0}
@@ -566,41 +554,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3945910289251341822, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7741006613010296092, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8267546734237244918, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355450644847730410, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355450644847730410, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355450644847730410, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355450644847730410, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9133545534604558570, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9133545534604558570, guid: 8514b0688e320bbfcb072f1a724a149b, type: 3}
-      propertyPath: jumpForce
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1115,7 +1071,7 @@ GameObject:
   - component: {fileID: 1662760342}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
