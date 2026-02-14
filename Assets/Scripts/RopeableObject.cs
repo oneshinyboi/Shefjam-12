@@ -5,12 +5,22 @@ namespace DefaultNamespace
 {
     public class RopeableObject : MonoBehaviour
     {
-        public SpringJoint CreateJoint()
+        public SpringJoint CreateJoint(Vector3 hitPoint)
         {
+
             var newSpringJoint = this.AddComponent<SpringJoint>();
             newSpringJoint.spring = 50;
             newSpringJoint.autoConfigureConnectedAnchor = false;
+            newSpringJoint.anchor = transform.InverseTransformPoint(hitPoint);
+
             return newSpringJoint;
+        }
+        public Transform CreateAttachPointTracker(Vector3 point)
+        {
+            var attachPointTracker = new GameObject();
+            attachPointTracker.transform.SetParent(transform);
+
+            return attachPointTracker.transform;
         }
 
 
