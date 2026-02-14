@@ -50,13 +50,13 @@
     <Analyzer Include="/home/diamond/Projects/games/ShefJam-12/Library/PackageCache/com.unity.dt.app-ui@8ac7e730dd5d/Runtime/MVVM/SourceGenerators/netstandard2.0/MVVMSourceGenerators.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/Door/SlidingDoorController.cs" />
     <Compile Include="Assets/Scripts/RopeGun.cs" />
     <Compile Include="Assets/Scripts/RopeableObject.cs" />
     <Compile Include="Assets/Scripts/RopeObjectFactory.cs" />
     <Compile Include="Assets/Scripts/RopeObject.cs" />
     <Compile Include="Assets/Scripts/MovingObject.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/Scripts/Door/DoorTrigger.cs" />
     <Compile Include="Assets/Scripts/Rope.cs" />
     <Compile Include="Assets/Kevin Iglesias/Human Animations/Scripts/SpineProxy.cs" />
     <Compile Include="Assets/PlayerController.cs" />

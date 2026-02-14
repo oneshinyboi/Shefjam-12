@@ -59,7 +59,6 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocity = desiredVelocity;
 
         var lookValue = _look.ReadValue<Vector2>();
-        Debug.Log(lookValue);
 
         _rb.angularVelocity = new Vector3(_rb.angularVelocity.x, lookValue.x * lookXSensitivity, _rb.angularVelocity.z);
 
