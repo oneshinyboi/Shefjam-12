@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float lookYSensitivity;
 
     public GameObject playerCamera;
-    public Rigidbody _botRb;
+    public Rigidbody botRb;
     public Vector3 respawnPosition; // Respawn position (set in the Inspector)
 
     private InputAction _move;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private bool _jumpTriggered = false;
     private bool _linkTriggered = false;
     private bool _grounded;
+    private bool _botGrounded;
 
     public void Awake()
     {
@@ -48,43 +50,48 @@ public class PlayerController : MonoBehaviour
 
     public void FixedUpdate()
     {
-        var moveValue = _move.ReadValue<Vector2>();
-        var horizontalMovementVelocity = moveValue * speed;
-
-        if (!_grounded)
-            horizontalMovementVelocity *= airborneControlReductionFactor; // make moving while in the air more rigid
-
-        var desiredVelocity = horizontalMovementVelocity.x * transform.right + horizontalMovementVelocity.y * transform.forward;
-        desiredVelocity.y += _rb.linearVelocity.y;
-        _rb.linearVelocity = desiredVelocity;
+        _grounded = ControlMovement(_rb, _grounded);
 
         var lookValue = _look.ReadValue<Vector2>();
-
-        _rb.angularVelocity = new Vector3(_rb.angularVelocity.x, lookValue.x * lookXSensitivity, _rb.angularVelocity.z);
-
         // Camera rotation
         var newCameraRotation = playerCamera.transform.rotation *
                                 Quaternion.Euler(-lookValue.y * lookYSensitivity * Time.deltaTime, 0, 0);
 
         playerCamera.transform.rotation = newCameraRotation;
 
-        if (_linkTriggered && _botRb != null)
+        if (_linkTriggered && botRb != null)
         {
-            desiredVelocity.y += _rb.linearVelocity.y;
-            _botRb.linearVelocity = desiredVelocity;
-
-            _botRb.angularVelocity = _rb.angularVelocity;
-            Debug.Log(_botRb.angularVelocity);
+            _botGrounded = ControlMovement(botRb, _botGrounded);
         }
 
+    }
+
+    public bool ControlMovement(Rigidbody rb, bool grounded)
+    {
+        var moveValue = _move.ReadValue<Vector2>();
+        var horizontalMovementVelocity = moveValue * speed;
+
+        if (!_grounded)
+            horizontalMovementVelocity *= airborneControlReductionFactor; // make moving while in the air more rigid
+
+        var desiredVelocity = horizontalMovementVelocity.x * rb.transform.right + horizontalMovementVelocity.y * rb.transform.forward;
+        desiredVelocity.y += rb.linearVelocity.y;
+        rb.linearVelocity = desiredVelocity;
+
+        var lookValue = _look.ReadValue<Vector2>();
+
+        rb.angularVelocity = new Vector3(rb.angularVelocity.x, lookValue.x * lookXSensitivity, rb.angularVelocity.z);
+
         // Jumping
-        if (_jumpTriggered && _grounded)
+        if (_jumpTriggered && grounded)
         {
-            _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            _grounded = false;
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            grounded = false;
         }
 
         _jumpTriggered = false;
+        return grounded;
+
     }
 
     // Collision detection for grounding
