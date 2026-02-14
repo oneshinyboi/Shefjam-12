@@ -61,15 +61,18 @@ namespace DefaultNamespace
                 }
                 else
                 {
-                    TryConnectCurrentRopeToOther();
-                    _currentRope = null;
+                    bool connected = TryConnectCurrentRopeToOther();
+                    if (connected)
+                    {
+                        _currentRope = null;
+                    }
                 }
                 Debug.Log("pressed interact");
             }
 
         }
 
-        private void TryConnectCurrentRopeToOther()
+        private bool TryConnectCurrentRopeToOther()
         {
             RaycastHit hit;
             Vector3 rayOrigin = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
@@ -79,9 +82,10 @@ namespace DefaultNamespace
                 if (hit.collider.TryGetComponent<RopeableObject>(out var ropeObject))
                 {
                     _currentRope.ConnectEndTo(ropeObject.GetComponent<Rigidbody>());
+                    return true;
                 }
             }
-
+            return false;
 
         }
 
