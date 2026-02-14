@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     private bool _jumpTriggered = false;
     private bool _linkTriggered = false;
     private bool _grounded;
-    private Vector3 _previousRotation; // To store the bot's target rotation
 
     public void Awake()
     {
@@ -32,7 +31,6 @@ public class PlayerController : MonoBehaviour
         _look = InputSystem.actions.FindAction("Look");
         _link = InputSystem.actions.FindAction("Link");
         _rb = GetComponent<Rigidbody>();
-        _previousRotation = _rb.angularVelocity;
     }
 
     public void Update()
@@ -45,11 +43,6 @@ public class PlayerController : MonoBehaviour
         if (_link.triggered)
         {
             _linkTriggered = !_linkTriggered;
-
-            if (!_linkTriggered) // if just went from linked to unlinked
-            {
-                _previousRotation = _botRb.angularVelocity; // save prev rotation
-            }
         }
     }
 
@@ -59,21 +52,22 @@ public class PlayerController : MonoBehaviour
         var horizontalMovementVelocity = moveValue * speed;
 
         if (!_grounded)
-            horizontalMovementVelocity *= airborneControlReductionFactor;
+            horizontalMovementVelocity *= airborneControlReductionFactor; // make moving while in the air more rigid
 
         var desiredVelocity = horizontalMovementVelocity.x * transform.right + horizontalMovementVelocity.y * transform.forward;
         desiredVelocity.y += _rb.linearVelocity.y;
         _rb.linearVelocity = desiredVelocity;
 
         var lookValue = _look.ReadValue<Vector2>();
+
         _rb.angularVelocity = new Vector3(_rb.angularVelocity.x, lookValue.x * lookXSensitivity, _rb.angularVelocity.z);
 
         // Camera rotation
         var newCameraRotation = playerCamera.transform.rotation *
                                 Quaternion.Euler(-lookValue.y * lookYSensitivity * Time.deltaTime, 0, 0);
+
         playerCamera.transform.rotation = newCameraRotation;
 
-        // When the link is triggered, move the bot and rotate it
         if (_linkTriggered && _botRb != null)
         {
             desiredVelocity.y += _rb.linearVelocity.y;
@@ -92,8 +86,6 @@ public class PlayerController : MonoBehaviour
 
         _jumpTriggered = false;
     }
-
-
 
     // Collision detection for grounding
     public void OnCollisionEnter(Collision other)
@@ -114,9 +106,3 @@ public class PlayerController : MonoBehaviour
     }
 }
 
-
-// before first C press, get rotation from player.
-// on first C press, work with default rotation
-// on C press to delink, save rotation value.
-// on next C press, keep rotation value and edit that relatively
-// repeat 

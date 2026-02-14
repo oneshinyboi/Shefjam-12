@@ -34,7 +34,10 @@ namespace DefaultNamespace
             for (int i = 0; i < _ropeSegments.Count + 1; i++)
             {
                 GameObject cylinder = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-                Destroy(cylinder.GetComponent<Collider>()); // don't need physics on the visual
+                //Destroy(cylinder.GetComponent<Collider>()); // don't need physics on the visual
+                var rigidbody = cylinder.AddComponent<Rigidbody>();
+                rigidbody.mass = 0.001f;
+
                 _cylinders.Add(cylinder);
             }
         }

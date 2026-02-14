@@ -15,10 +15,11 @@ namespace DefaultNamespace
 
             return newSpringJoint;
         }
-        public Transform CreateAttachPointTracker(Vector3 point)
+        public Transform CreateAttachPointTracker(Vector3 point, Transform attachTo)
         {
             var attachPointTracker = new GameObject();
-            attachPointTracker.transform.SetParent(transform);
+            attachPointTracker.transform.position = point;
+            attachPointTracker.transform.SetParent(attachTo);
 
             return attachPointTracker.transform;
         }
