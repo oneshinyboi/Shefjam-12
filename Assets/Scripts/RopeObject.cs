@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -8,16 +9,19 @@ namespace DefaultNamespace
     public class RopeObject : MonoBehaviour
     {
         public float distanceBetweenSegments;
+        public float despawnTime;
+        public bool destroying;
         public Transform attachPoint1;
         public Transform attachPoint2;
 
         private List<GameObject> _ropeSegments;
 
-        public void Init(Transform at1, Transform at2, List<GameObject> segments)
+        public void Init(Transform at1, Transform at2, List<GameObject> segments, float desTime)
         {
             attachPoint1 = at1;
             attachPoint2 = at2;
             _ropeSegments = segments;
+            despawnTime = desTime;
             CreateVisualRope();
         }
 
@@ -44,6 +48,7 @@ namespace DefaultNamespace
 
         private void Update()
         {
+            if (destroying) return;
             if (attachPoint1 == null || attachPoint2 == null)
             {
                 Destroy(transform.gameObject);
@@ -74,6 +79,36 @@ namespace DefaultNamespace
                 _cylinders[i + 1].transform.position = midpoint;
                 _cylinders[i + 1].transform.up = end - start; // cylinder's long axis is local Y
                 _cylinders[i + 1].transform.localScale = new Vector3(0.05f, distance / 2f, 0.05f);
+            }
+        }
+
+        public void StartDestruction()
+        {
+            destroying = true;
+            foreach (var segment in _ropeSegments)
+            {
+                Destroy(segment);
+            }
+            StartCoroutine(DespawnCylinders());
+
+        }
+
+        private IEnumerator DespawnCylinders()
+        {
+            float elapsedTime = 0f;
+            float lerpFactor = 0f;
+            while (lerpFactor <= 1)
+            {
+                List<Vector3> cylinderLocalScales = _cylinders.Select(c => c.transform.localScale).ToList();
+                for (int i=0; i<_cylinders.Count; i++)
+                {
+                    _cylinders[i].transform.localScale =
+                        Vector3.Lerp(cylinderLocalScales[i], Vector3.zero, lerpFactor);
+                }
+
+                elapsedTime += Time.deltaTime;
+                yield return null;
+                lerpFactor = elapsedTime / despawnTime;
             }
         }
 

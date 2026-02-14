@@ -37,7 +37,7 @@ namespace DefaultNamespace
                 ropeSegments.Add(newSegment);
             }
 
-            ropeObject.Init(attachPoint1, attachPoint2, ropeSegments);
+            ropeObject.Init(attachPoint1, attachPoint2, ropeSegments, 4);
             return ropeObject;
         }
     }

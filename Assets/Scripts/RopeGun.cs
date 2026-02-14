@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,9 +33,11 @@ namespace DefaultNamespace
         private InputAction _fire;
         private InputAction _scroll;
         private InputAction _interact;
+        private InputAction _deleteRope;
 
         public RopeObjectFactory ropeObjectFactory;
         private RopeObject _currentRope;
+        private List<RopeObject> _allRopes = new();
 
 
         private void Awake()
@@ -42,6 +45,7 @@ namespace DefaultNamespace
             _fire = InputSystem.actions.FindAction("Attack");
             _scroll = InputSystem.actions.FindAction("Scroll");
             _interact = InputSystem.actions.FindAction("Interact");
+            _deleteRope = InputSystem.actions.FindAction("DeleteRope");
             _initialLocalPosition = transform.localPosition;
         }
 
@@ -64,10 +68,24 @@ namespace DefaultNamespace
                     bool connected = TryConnectCurrentRopeToOther();
                     if (connected)
                     {
+                        _allRopes.Add(_currentRope);
                         _currentRope = null;
                     }
                 }
-                Debug.Log("pressed interact");
+            }
+            else if (_deleteRope.triggered)
+            {
+                if (_currentRope != null)
+                {
+                    _currentRope.StartDestruction();
+                    _currentRope = null;
+                }
+                else if (_allRopes.Any())
+                {
+                    _allRopes.Last().StartDestruction();
+                    _allRopes.RemoveAt(_allRopes.Count - 1);
+                }
+
             }
 
         }
@@ -98,11 +116,10 @@ namespace DefaultNamespace
             {
                 if (hit.collider.TryGetComponent<RopeableObject>(out var ropeObject))
                 {
-                    Debug.Log("we got a ropeobject");
                     SpringJoint newJoint = ropeObject.CreateJoint(hit.point);
                     Transform trackingTransform = ropeObject.CreateAttachPointTracker(hit.point, ropeObject.transform);
 
-                    _currentRope = ropeObjectFactory.CreateRopeObject(10, trackingTransform, firePoint.transform, newJoint);
+                    _currentRope = ropeObjectFactory.CreateRopeObject(5, trackingTransform, firePoint.transform, newJoint);
                     _currentRope.ConnectEndTo(_playerRigidBody, firePoint.transform);
                 }
             }
