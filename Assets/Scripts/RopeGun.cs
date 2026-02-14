@@ -81,7 +81,7 @@ namespace DefaultNamespace
             {
                 if (hit.collider.TryGetComponent<RopeableObject>(out var ropeObject))
                 {
-                    _currentRope.ConnectEndTo(ropeObject.GetComponent<Rigidbody>(), ropeObject.CreateAttachPointTracker(hit.point));
+                    _currentRope.ConnectEndTo(ropeObject.GetComponent<Rigidbody>(), ropeObject.CreateAttachPointTracker(hit.point, ropeObject.transform));
                     return true;
                 }
             }
@@ -100,9 +100,9 @@ namespace DefaultNamespace
                 {
                     Debug.Log("we got a ropeobject");
                     SpringJoint newJoint = ropeObject.CreateJoint(hit.point);
-                    Transform trackingTransform = ropeObject.CreateAttachPointTracker(hit.point);
+                    Transform trackingTransform = ropeObject.CreateAttachPointTracker(hit.point, ropeObject.transform);
 
-                    _currentRope = ropeObjectFactory.CreateRopeObject(50, trackingTransform, firePoint.transform, newJoint);
+                    _currentRope = ropeObjectFactory.CreateRopeObject(10, trackingTransform, firePoint.transform, newJoint);
                     _currentRope.ConnectEndTo(_playerRigidBody, firePoint.transform);
                 }
             }
