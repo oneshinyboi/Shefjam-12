@@ -9,7 +9,8 @@ namespace DefaultNamespace
         public float speed;
         public float airborneControlReductionFactor;
         public float jumpForce;
-        public float lookSensitivity;
+        public float lookXSensitivity;
+        public float lookYSensitivity;
 
         public GameObject playerCamera;
 
@@ -39,20 +40,21 @@ namespace DefaultNamespace
         public void FixedUpdate()
         {
             var moveValue = _move.ReadValue<Vector2>();
-            var horizontalMovement = moveValue * (speed * Time.fixedDeltaTime);
+            var horizontalMovementVelocity = moveValue * speed;
             if (!_grounded)
-                horizontalMovement *= airborneControlReductionFactor;
-            var newPosition = _rb.position + horizontalMovement.y * transform.forward + horizontalMovement.x * transform.right;
-            _rb.MovePosition(newPosition);
+                horizontalMovementVelocity *= airborneControlReductionFactor;
+            var desiredVelocity = horizontalMovementVelocity.x * transform.right + horizontalMovementVelocity.y * transform.forward;
+            desiredVelocity.y += _rb.linearVelocity.y;
+            _rb.linearVelocity = desiredVelocity;
 
+            var lookValue = _look.ReadValue<Vector2>();
+            Debug.Log(lookValue);
 
-            var lookValue = _look.ReadValue<Vector2>() * -1;
-            var newRotation =
-                _rb.rotation * Quaternion.Euler(0, -lookValue.x * lookSensitivity * Time.fixedDeltaTime, 0);
-            _rb.MoveRotation(newRotation);
+            _rb.angularVelocity = new Vector3(_rb.angularVelocity.x, lookValue.x * lookXSensitivity, _rb.angularVelocity.z);
+
 
             var newCameraRotation = playerCamera.transform.rotation *
-                                    Quaternion.Euler(lookValue.y * lookSensitivity * Time.fixedDeltaTime, 0, 0);
+                                    Quaternion.Euler(-lookValue.y * lookYSensitivity* Time.deltaTime , 0, 0);
             playerCamera.transform.rotation = newCameraRotation;
 
 
@@ -75,7 +77,10 @@ namespace DefaultNamespace
 
         public void Die()
         {
-            _rb.Move(new Vector3(0, 0, 0), Quaternion.identity);
+            _rb.position = Vector3.zero;
+            _rb.rotation = Quaternion.identity;
+            _rb.linearVelocity = Vector3.zero;
+            _rb.angularVelocity = Vector3.zero;
         }
     }
 }

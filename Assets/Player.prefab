@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2963419532015846373}
   - component: {fileID: 5080386828331316046}
+  - component: {fileID: 7898737513861476738}
   m_Layer: 0
   m_Name: portalgun_lowpoly
   m_TagString: Untagged
@@ -31,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2400447668532769469}
+  - {fileID: 8273453017713931817}
   m_Father: {fileID: 8355450644847730410}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5080386828331316046
@@ -48,6 +50,26 @@ MonoBehaviour:
   recoilSpeed: 1
   returnSpeed: 1
   recoilOffset: {x: 0, y: 0, z: -0.1}
+  firePoint: {fileID: 9203304556562358381}
+  defaultGrabDistance: 10
+  grabDistanceChangeSpeed: 1
+  minimumGrabDistance: 4
+  maximumGrabDistance: 20
+  _playerRigidBody: {fileID: 8267546734237244918}
+  ropeObjectFactory: {fileID: 7898737513861476738}
+--- !u!114 &7898737513861476738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2480356333337057631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbf695990044548ac1e4defe6708fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.RopeObjectFactory
+  RopeSegment: {fileID: 6512635137488330240, guid: 7188e72273eb57cbdb0f6fa962f17188, type: 3}
 --- !u!1 &6910269029086224774
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +311,7 @@ GameObject:
   - component: {fileID: 548721093472868997}
   - component: {fileID: 8267546734237244918}
   - component: {fileID: 9133545534604558570}
-  - component: {fileID: 4221288498356335695}
+  - component: {fileID: 6398323458431763505}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -379,7 +401,7 @@ Rigidbody:
   m_GameObject: {fileID: 7741006613010296092}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 0.1
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -412,10 +434,11 @@ MonoBehaviour:
   speed: 10
   airborneControlReductionFactor: 0.7
   jumpForce: 5
-  lookSensitivity: 10
+  lookXSensitivity: 1
+  lookYSensitivity: 30
   playerCamera: {fileID: 7402363225616880783}
---- !u!65 &4221288498356335695
-BoxCollider:
+--- !u!136 &6398323458431763505
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -432,6 +455,39 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &9203304556562358381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8273453017713931817}
+  m_Layer: 0
+  m_Name: fire point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8273453017713931817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9203304556562358381}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.57}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2963419532015846373}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
