@@ -11,6 +11,7 @@ namespace Assets.Scripts
     {
         public List<GameObject> gameObjects;
         public float speed;
+
         private Rigidbody _rb;
         private int _currentIndex = 0;
         private void Awake()
