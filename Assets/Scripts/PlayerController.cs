@@ -1,109 +1,115 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    public float airborneControlReductionFactor;
     public float jumpForce;
-    public float lookSensitivity;
+    public float lookXSensitivity;
+    public float lookYSensitivity;
 
     public GameObject playerCamera;
-
     public Rigidbody botRb;
-
-    private bool linkEnabled = false;
+    public Vector3 respawnPosition; // Respawn position (set in the Inspector)
 
     private InputAction _move;
     private InputAction _jump;
     private InputAction _look;
     private InputAction _link;
-
     private Rigidbody _rb;
-
-    private bool jumpPressed;
-    private bool linkPressed;
+    private bool _jumpTriggered = false;
+    private bool _linkTriggered = false;
+    private bool _grounded;
+    private bool _botGrounded;
 
     public void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
-
         _move = InputSystem.actions.FindAction("Move");
         _jump = InputSystem.actions.FindAction("Jump");
         _look = InputSystem.actions.FindAction("Look");
         _link = InputSystem.actions.FindAction("Link");
-
         _rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    public void Update()
     {
         if (_jump.triggered)
         {
-            jumpPressed = true;
+            _jumpTriggered = true;
         }
 
         if (_link.triggered)
         {
-            linkPressed = true;
+            _linkTriggered = !_linkTriggered;
         }
     }
 
     public void FixedUpdate()
     {
-        if (linkPressed)
+        _grounded = ControlMovement(_rb, _grounded);
+
+        var lookValue = _look.ReadValue<Vector2>();
+        // Camera rotation
+        var newCameraRotation = playerCamera.transform.rotation *
+                                Quaternion.Euler(-lookValue.y * lookYSensitivity * Time.deltaTime, 0, 0);
+
+        playerCamera.transform.rotation = newCameraRotation;
+
+        if (_linkTriggered && botRb != null)
         {
-            linkEnabled = !linkEnabled;
-            linkPressed = false;
+            _botGrounded = ControlMovement(botRb, _botGrounded);
         }
 
+    }
+
+    public bool ControlMovement(Rigidbody rb, bool grounded)
+    {
         var moveValue = _move.ReadValue<Vector2>();
-        var horizontalMovement = moveValue * (speed * Time.fixedDeltaTime);
+        var horizontalMovementVelocity = moveValue * speed;
 
-        // Move PLAYER
-        Vector3 newPosition = _rb.position +
-                              horizontalMovement.y * transform.forward +
-                              horizontalMovement.x * transform.right;
+        if (!_grounded)
+            horizontalMovementVelocity *= airborneControlReductionFactor; // make moving while in the air more rigid
 
-        _rb.MovePosition(newPosition);
+        var desiredVelocity = horizontalMovementVelocity.x * rb.transform.right + horizontalMovementVelocity.y * rb.transform.forward;
+        desiredVelocity.y += rb.linearVelocity.y;
+        rb.linearVelocity = desiredVelocity;
 
-        // Move BOT if linked
-        if (linkEnabled && botRb != null)
+        var lookValue = _look.ReadValue<Vector2>();
+
+        rb.angularVelocity = new Vector3(rb.angularVelocity.x, lookValue.x * lookXSensitivity, rb.angularVelocity.z);
+
+        // Jumping
+        if (_jumpTriggered && grounded)
         {
-            Vector3 botNewPosition = botRb.position +
-                                     horizontalMovement.y * botRb.transform.forward +
-                                     horizontalMovement.x * botRb.transform.right;
-
-            botRb.MovePosition(botNewPosition);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            grounded = false;
         }
 
-        // Rotation
-        var lookValue = _look.ReadValue<Vector2>() * -1;
+        _jumpTriggered = false;
+        return grounded;
 
-        Quaternion newRotation =
-            _rb.rotation * Quaternion.Euler(0, -lookValue.x * lookSensitivity * Time.fixedDeltaTime, 0);
+    }
 
-        _rb.MoveRotation(newRotation);
-
-        if (linkEnabled && botRb != null)
+    // Collision detection for grounding
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Floor"))
         {
-            botRb.MoveRotation(Quaternion.Euler(0, _rb.rotation.eulerAngles.y, 0));
-        }
-
-        if (jumpPressed)
-        {
-            _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
-            if (linkEnabled && botRb != null)
-            {
-                botRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            }
-
-            jumpPressed = false;
+            _grounded = true;
         }
     }
 
+    // Die and respawn at the designated position
     public void Die()
     {
-        _rb.Move(new Vector3(0, 0, 0), Quaternion.identity);
+        _rb.position = respawnPosition; // Respawn the player to a specified position
+        _rb.rotation = Quaternion.identity;
+        _rb.linearVelocity = Vector3.zero;
+        _rb.angularVelocity = Vector3.zero;
     }
 }
+
