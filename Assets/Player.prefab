@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 548721093472868997}
   - component: {fileID: 8267546734237244918}
   - component: {fileID: 9133545534604558570}
-  - component: {fileID: 110884856196300747}
+  - component: {fileID: 8335231108824925845}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -329,7 +329,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.62, y: 1.77, z: 0.1}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8355450644847730410}
@@ -400,9 +400,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7741006613010296092}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0.1
-  m_AngularDamping: 0.05
+  m_AngularDamping: 10
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -431,16 +431,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3247f541734430e9310bd5f333777ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.PlayerController
-  speed: 10
+  maxSpeed: 6
+  acceleration: 40
   airborneControlReductionFactor: 0.7
-  jumpForce: 5
-  lookXSensitivity: 1
+  jumpForce: 50
+  lookXSensitivity: 25
   lookYSensitivity: 30
   playerCamera: {fileID: 7402363225616880783}
+  respawnPoint: {fileID: 0}
   botRb: {fileID: 0}
-  respawnPosition: {x: 0, y: 0, z: 0}
---- !u!65 &110884856196300747
-BoxCollider:
+--- !u!136 &8335231108824925845
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -457,8 +458,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9203304556562358381
 GameObject:
