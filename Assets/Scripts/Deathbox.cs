@@ -12,7 +12,7 @@ public class Deathbox : MonoBehaviour {
         Debug.Log("got here 2");
         if (other.gameObject.CompareTag("Player"))
         {
-            //other.gameObject.GetComponent<PlayerController>()?.Die();
+            other.gameObject.GetComponent<PlayerController>()?.Die();
 
         }
     }
