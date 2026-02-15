@@ -12,8 +12,9 @@ public class PlayerController : MonoBehaviour
     public float lookYSensitivity;
 
     public GameObject playerCamera;
+    public GameObject respawnPoint;
     public Rigidbody botRb;
-    public Vector3 respawnPosition; // Respawn position (set in the Inspector)
+    private Vector3 _respawnPosition; // Respawn position (set in the Inspector)
 
     private InputAction _move;
     private InputAction _jump;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         _look = InputSystem.actions.FindAction("Look");
         _link = InputSystem.actions.FindAction("Link");
         _rb = GetComponent<Rigidbody>();
+        _respawnPosition = respawnPoint.transform.position;
     }
 
     public void Update()
@@ -106,7 +108,7 @@ public class PlayerController : MonoBehaviour
     // Die and respawn at the designated position
     public void Die()
     {
-        _rb.position = respawnPosition; // Respawn the player to a specified position
+        _rb.position = _respawnPosition; // Respawn the player to a specified position
         _rb.rotation = Quaternion.identity;
         _rb.linearVelocity = Vector3.zero;
         _rb.angularVelocity = Vector3.zero;
