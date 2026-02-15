@@ -19,6 +19,10 @@ public class PhysicsButton1 : MonoBehaviour
     public UnityEvent onPressed;
     public UnityEvent onReleased;
 
+    [SerializeField] private string validTag = "Player";
+    private int pressingObjects = 0;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -49,7 +53,7 @@ public class PhysicsButton1 : MonoBehaviour
         if (buttonTop.localPosition.y <= buttonLowerLimit.localPosition.y)
             buttonTop.transform.position = new Vector3(buttonLowerLimit.position.x, buttonLowerLimit.position.y, buttonLowerLimit.position.z);
 
-        if (Vector3.Distance(buttonTop.position, buttonLowerLimit.position) < upperLowerDiff * threshold)
+        if (pressingObjects > 0 && Vector3.Distance(buttonTop.position, buttonLowerLimit.position) < upperLowerDiff * threshold)
             isPressed = true;
 
         else
@@ -68,6 +72,7 @@ public class PhysicsButton1 : MonoBehaviour
         pressedSound.pitch = 1;
         pressedSound.Play();
         onPressed.Invoke();
+        Debug.Log("button pressed");
     }
 
     void Released()
@@ -77,5 +82,22 @@ public class PhysicsButton1 : MonoBehaviour
         releasedSound.Play();
         onReleased.Invoke();
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag(validTag))
+        {
+            pressingObjects++;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag(validTag))
+        {
+            pressingObjects--;
+        }
+    }
+
 
 }
