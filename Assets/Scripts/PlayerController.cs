@@ -5,7 +5,8 @@ using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    public float maxSpeed;
+    public float acceleration;
     public float airborneControlReductionFactor;
     public float jumpForce;
     public float lookXSensitivity;
@@ -71,18 +72,26 @@ public class PlayerController : MonoBehaviour
     public bool ControlMovement(Rigidbody rb, bool grounded)
     {
         var moveValue = _move.ReadValue<Vector2>();
-        var horizontalMovementVelocity = moveValue * speed;
+        var horizontalAcceleration = moveValue * acceleration;
 
         if (!_grounded)
-            horizontalMovementVelocity *= airborneControlReductionFactor; // make moving while in the air more rigid
+            horizontalAcceleration *= airborneControlReductionFactor; // make moving while in the air more rigid
 
-        var desiredVelocity = horizontalMovementVelocity.x * rb.transform.right + horizontalMovementVelocity.y * rb.transform.forward;
-        desiredVelocity.y += rb.linearVelocity.y;
-        rb.linearVelocity = desiredVelocity;
+        var thisFramesVelocity = horizontalAcceleration.x * rb.transform.right * Time.deltaTime + horizontalAcceleration.y * rb.transform.forward * Time.deltaTime;
+        rb.linearVelocity += thisFramesVelocity;
+        var horizontalVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.z);
+        if (horizontalVelocity.magnitude > maxSpeed)
+        {
+            var scaledHorizontalVelocity = horizontalVelocity.normalized * maxSpeed;
+            Vector3 limitedVelocity =
+                new Vector3(scaledHorizontalVelocity.x, rb.linearVelocity.y, scaledHorizontalVelocity.y);
+            rb.linearVelocity = limitedVelocity;
+        }
 
         var lookValue = _look.ReadValue<Vector2>();
 
-        rb.angularVelocity = new Vector3(rb.angularVelocity.x, lookValue.x * lookXSensitivity, rb.angularVelocity.z);
+        var angularVelocityToAdd = new Vector3(0, lookValue.x * lookXSensitivity * Time.deltaTime, 0);
+        rb.angularVelocity += angularVelocityToAdd;
 
         // Jumping
         if (_jumpTriggered && grounded)
